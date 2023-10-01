@@ -1,0 +1,242 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<conio.h>
+#include<ctype.h>
+#include<dos.h>
+#include<graphics.h>
+#include<windows.h>
+main()
+{
+    /*all ints:a,b,c,d,e,f,g,h,i,j,k,l,x,y,z,sum,all*/
+    /*all chars:f*/
+
+    int a;
+    char f;
+    system("COLOR F0");                                /*this programming was difficult asf*/
+    printf("WELCOME TO THE CALCULATOR\n\n\n");
+    printf("PRESS ENTER TO PROCEED...");
+    getchar();
+    main_menu:
+        system("cls");
+        printf("\n");
+        printf("======================\n\n\n");
+        printf("ADDITION................[1]\n\n");
+        printf("SUBTRACTION.............[2]\n\n");
+        printf("MULTIPLICATION..........[3]\n\n");
+        printf("DIVISION................[4]\n\n");
+        printf("FOR OTHER OPTIONS.......[0]\n\n");
+        printf("ENTER YOUR CHOICE: ");
+        scanf("%d",&a);
+
+
+            if(a==1)
+            {
+
+                ADD:
+                system("cls");
+                system("COLOR E4 ");
+                int x,y,z,b,sum=0;
+                printf("ADDITION PLATFORM\n");
+                printf("--------------------\n");
+                printf("ENTER THE NUMBER OF VALUE YOU WOULD ADD: ");
+                scanf("%d",&x);
+                for(z=1;z<=x;z=z+1)
+                {
+                    printf("\n");
+                    printf("ENTER THE %d NUMBER: ",z);
+                    scanf("%d",&y);
+                    sum=sum+y;
+
+                }
+                printf("\n");
+                printf("ANSWER IS: %d",sum);
+                printf("\n");
+
+
+                              /**/
+                printf("\n");
+                printf("=========================================\n");
+                printf("PRESS [R] TO GO TO THE MAIN MENU\n");
+                printf("PRESS [T] TO RETRY\n");
+                printf("PRESS [Q] TO QUIT THE PROGRAM\n");
+                printf("========================================");
+                            /**/
+
+               scanf("%s",&f);
+                if(f=='R'||f=='r')
+                {
+                    goto main_menu;
+                }
+                if (f=='t'||f=='T')
+                {
+                    goto ADD;
+                }
+
+                if (f=='q'||f=='Q')
+                {
+                    system("cls");
+                    system("COLOR 0F");
+                    printf("THANKS FOR USING THE PROGRAM");
+                }
+            }
+
+
+
+            if(a==2)
+
+            {
+                SUB:
+                int c,d,e;
+                system("cls");
+                system("COLOR E0");
+                printf("SUBTACTION PLATFORM\n\n");
+                printf("ENTER THE FIRST NUMBER: ");
+                scanf("%d",&c);
+                printf("\n");
+                printf("ENTER THE SECOND NUMBER: ");
+                scanf("%d",&d);
+                printf("\n");
+                printf("------------------------------------\n");
+                printf(" %d",c);
+                printf("\n");
+                printf("-%d",d);
+                printf("\n");
+                printf("_____________");
+                printf("\n");
+                e=c-d;
+                printf("%d",e);
+                getchar();
+
+                               /**/
+                printf("\n");
+                printf("=========================================\n");
+                printf("PRESS [R] TO GO TO THE MAIN MENU\n");
+                printf("PRESS [T] TO RETRY\n");
+                printf("PRESS [Q] TO QUIT THE PROGRAM\n");
+                printf("========================================");
+                            /**/
+
+                scanf("%s",&f);
+
+                if(f=='R'||f=='r')
+                {
+                    goto main_menu;
+                }
+                if (f=='t'||f=='T')
+                {
+                    goto SUB;
+                }
+
+                if (f=='q'||f=='Q')
+                {
+                      system("cls");
+                    system("COLOR 0F");
+                    printf("THANKS FOR USING THE PROGRAM");
+                }
+            }
+
+                  conclu:
+
+
+
+
+            if(a==3)
+            {
+
+
+                MUL:
+                system("cls");
+                system("COLOR F4");
+                int g,h,i;
+                printf("MULTIPLICATION PLATFORM\n\n");
+                printf("ENTER THE FIRST NUMBER: ");
+                scanf("%d",&g);
+                printf("\nENTER THE SECOND NUMBER: ");
+                scanf("%d",&h);
+                i=g*h;
+                printf("\nPRODUCT: %d",i);
+                printf("\n");
+
+                               /**/
+                printf("\n");
+                printf("=========================================\n");
+                printf("PRESS [R] TO GO TO THE MAIN MENU\n");
+                printf("PRESS [T] TO RETRY\n");
+                printf("PRESS [Q] TO QUIT THE PROGRAM\n");
+                printf("========================================");
+                            /**/
+
+                scanf("%s",&f);
+                if(f=='R'||f=='r')
+                {
+                    goto main_menu;
+                }
+                if (f=='t'||f=='T')
+                {
+                    goto MUL;
+                }
+
+                if (f=='q'||f=='Q')
+                {
+                     system("cls");
+                    system("COLOR 0F");
+                    printf("THANKS FOR USING THE PROGRAM");
+                }
+            }
+
+
+
+            if (a==4)
+            {
+
+                DIV:
+                system("cls");
+                system("COLOR B0");
+
+                float j,k,l;
+                printf("DIVISION PLATFORM\n\n");
+                printf("ENTER DIVISOR: ");
+                scanf("%f",&j);
+                printf("\n");
+                printf("ENTER DIVIDENT: ");
+                scanf("%f",&k);
+                l=j/k;
+
+                printf("\nQUETIENT: %f",l);
+                getchar();
+
+                               /**/
+                printf("\n");
+                printf("=========================================\n");
+                printf("PRESS [R] TO GO TO THE MAIN MENU\n");
+                printf("PRESS [T] TO RETRY\n");
+                printf("PRESS [Q] TO QUIT THE PROGRAM\n");
+                printf("========================================");
+                            /**/
+
+                scanf("%s",&f);
+                if(f=='R'||f=='r')
+                {
+                    goto main_menu;
+                }
+                if (f=='t'||f=='T')
+                {
+                    goto DIV;
+                }
+
+                if (f=='q'||f=='Q')
+                {
+                      system("cls");
+                    system("COLOR 0F");
+                    printf("THANKS FOR USING THE PROGRAM");
+                }
+            }
+
+
+
+
+
+
+
+    return 0;
+}
